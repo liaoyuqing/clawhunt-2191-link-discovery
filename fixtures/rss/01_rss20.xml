@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>行业情报简报（虚构 RSS 夹具 01）</title>
+    <link>https://feed.example.com/</link>
+    <description>虚构的会员空间行业情报简报</description>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 12 Mar 2026 09:30:00 +0800</lastBuildDate>
+    <item>
+      <title>会员空间需求侧的三条主线</title>
+      <link>https://feed.example.com/brief/2026/03/12/demand-lines.html</link>
+      <guid isPermaLink="true">https://feed.example.com/brief/2026/03/12/demand-lines.html</guid>
+      <pubDate>Thu, 12 Mar 2026 09:04:00 +0800</pubDate>
+      <description>从走访数据归纳出的三条需求主线。</description>
+    </item>
+    <item>
+      <title>区域资金流向月报</title>
+      <link>https://feed.example.com/brief/2026/03/11/capital-flow.html</link>
+      <pubDate>Wed, 11 Mar 2026 18:20:00 +0800</pubDate>
+      <description>二月区域资金流向回顾。</description>
+    </item>
+    <item>
+      <title>政策更新摘要（三月）</title>
+      <link>/brief/2026/03/10/policy.html</link>
+      <pubDate>Tue, 10 Mar 2026 08:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>外部转载：园区运营的三个误区</title>
+      <link>https://other.example.net/brief/2026/03/09/myths.html</link>
+      <pubDate>Mon, 09 Mar 2026 11:45:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>附件：会员走访表（PDF）</title>
+      <link>https://feed.example.com/brief/2026/03/08/visit-form.pdf</link>
+      <enclosure url="https://feed.example.com/brief/2026/03/08/visit-form.pdf" length="204800" type="application/pdf"/>
+      <pubDate>Sun, 08 Mar 2026 16:10:00 +0800</pubDate>
+    </item>
+  </channel>
+</rss>
