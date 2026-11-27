@@ -1,0 +1,18 @@
+# robots.txt for the fictional HTML fixture host (fixture set 2191)
+# Two groups: the catch-all and the one naming this crawler.  A crawler obeys
+# only the group that names it, so the specific group repeats the rules the
+# operator wants applied to us (plus one we alone may not read).
+
+User-agent: *
+Disallow: /admin/
+Disallow: /user/
+Allow: /user/public/
+Disallow: /*.pdf$
+
+User-agent: intel-link-discovery
+Disallow: /admin/
+Disallow: /user/
+Allow: /user/public/
+Disallow: /private/
+Disallow: /*.pdf$
+Disallow: /notice/2026/03/08/policy-attach
