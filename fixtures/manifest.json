@@ -1,0 +1,194 @@
+{
+  "fixtures": [
+    {
+      "id": "01_date_path_list",
+      "entry_url": "https://www.example.com/list/index.html",
+      "pages": ["html/01_date_path_list.html"],
+      "allowed_hosts": ["www.example.com", "news.example.com"],
+      "expected": [
+        "https://www.example.com/news/2026/03/12/negotiation-playbook.html",
+        "https://www.example.com/news/2026/03/10/member-space-upgrade.html",
+        "https://news.example.com/news/2026/03/08/site-visit-checklist.html",
+        "https://www.example.com/news/2026/03/05/pipeline-review.html",
+        "https://www.example.com/news/2026/02/28/tenant-mix.html?page=1"
+      ]
+    },
+    {
+      "id": "02_numeric_id_list",
+      "entry_url": "https://daily.example.com/list",
+      "pages": ["html/02_numeric_id_list.html"],
+      "allowed_hosts": ["daily.example.com"],
+      "expected": [
+        "https://daily.example.com/article/100023.html",
+        "https://daily.example.com/article/100024.html",
+        "https://daily.example.com/article/100025.html",
+        "https://daily.example.com/article/100026.html",
+        "https://daily.example.com/files/notice/100027.html"
+      ]
+    },
+    {
+      "id": "03_slug_with_id",
+      "entry_url": "https://ops.example.com/post",
+      "pages": ["html/03_slug_with_id.html"],
+      "allowed_hosts": ["ops.example.com"],
+      "expected": [
+        "https://ops.example.com/post/how-to-negotiate-12031.html",
+        "https://ops.example.com/post/space-layout-12032.html",
+        "https://ops.example.com/post/event-recap-12033.html",
+        "https://ops.example.com/post/member-survey-12034.html",
+        "https://ops.example.com/post/ops-calendar-12035.html"
+      ]
+    },
+    {
+      "id": "04_compact_date",
+      "entry_url": "https://insight.example.cn/index.html",
+      "pages": ["html/04_compact_date.html"],
+      "allowed_hosts": ["insight.example.cn", "www.example.cn"],
+      "expected": [
+        "https://insight.example.cn/insight/20260312/pricing-anchor.html",
+        "https://insight.example.cn/insight/20260311/tenant-retention.html",
+        "https://www.example.cn/insight/20260309/brand-voice.html",
+        "https://insight.example.cn/insight/20260308/data-desk.html"
+      ]
+    },
+    {
+      "id": "05_main_region",
+      "entry_url": "https://member.example.org/insights",
+      "pages": ["html/05_main_region.html"],
+      "allowed_hosts": ["member.example.org"],
+      "expected": [
+        "https://member.example.org/insights/2026-02-08/space-as-a-service",
+        "https://member.example.org/insights/2026-02-01/renewal-signals",
+        "https://member.example.org/insights/2026-01-24/community-events"
+      ]
+    },
+    {
+      "id": "06_pagination",
+      "entry_url": "https://brief.example.cn/brief/list/index.html",
+      "pages": ["html/06_pagination_page1.html", "html/06_pagination_page2.html"],
+      "page_urls": ["https://brief.example.cn/brief/list/index.html", "https://brief.example.cn/brief/list/page-2.html"],
+      "allowed_hosts": ["brief.example.cn"],
+      "max_pages": 2,
+      "expected": [
+        "https://brief.example.cn/brief/2026/03/12/space-demand.html",
+        "https://brief.example.cn/brief/2026/03/11/policy-update.html",
+        "https://brief.example.cn/brief/2026/03/10/capital-flow.html",
+        "https://brief.example.cn/brief/2026/03/09/talent-map.html",
+        "https://brief.example.cn/brief/2026/03/08/lease-index.html",
+        "https://brief.example.cn/brief/2026/03/07/competitor-watch.html"
+      ]
+    },
+    {
+      "id": "07_selector_configured",
+      "entry_url": "https://docs.example.cn/docs",
+      "pages": ["html/07_selector_configured.html"],
+      "allowed_hosts": ["docs.example.cn", "docs.example.com"],
+      "list_selector": "div.weird-wrapper-x9 a.link-title",
+      "expected": [
+        "https://docs.example.cn/docs/kb/member-onboarding",
+        "https://docs.example.cn/docs/kb/crm-sync",
+        "https://docs.example.cn/docs/kb/knowledge-base",
+        "https://docs.example.com/docs/kb/sop-writing",
+        "https://docs.example.cn/docs/kb/meeting-notes"
+      ]
+    },
+    {
+      "id": "08_attachment_list",
+      "entry_url": "https://notice.example.com/notice",
+      "pages": ["html/08_attachment_list.html"],
+      "allowed_hosts": ["notice.example.com"],
+      "expected": [
+        "https://notice.example.com/notice/2026/03/12/move-plan.html",
+        "https://notice.example.com/notice/2026/03/12/move-plan.pdf",
+        "https://notice.example.com/notice/2026/03/10/fee-schedule.pdf",
+        "https://notice.example.com/notice/2026/03/09/template.xlsx",
+        "https://notice.example.com/notice/2026/03/08/policy.html",
+        "https://notice.example.com/notice/2026/03/08/policy-attach"
+      ],
+      "expected_attachments": [
+        "https://notice.example.com/notice/2026/03/12/move-plan.pdf",
+        "https://notice.example.com/notice/2026/03/10/fee-schedule.pdf",
+        "https://notice.example.com/notice/2026/03/09/template.xlsx",
+        "https://notice.example.com/notice/2026/03/08/policy-attach"
+      ]
+    },
+    {
+      "id": "09_heuristic_noise",
+      "entry_url": "https://industry.example.com/industry",
+      "pages": ["html/09_heuristic_noise.html"],
+      "allowed_hosts": ["industry.example.com"],
+      "expected": [
+        "https://industry.example.com/industry/2026/03/12/supply-chain.html",
+        "https://industry.example.com/industry/2026/03/11/office-demand.html",
+        "https://industry.example.com/industry/2026/03/10/service-provider.html"
+      ]
+    },
+    {
+      "id": "10_full_site",
+      "entry_url": "https://portal.example.cn/",
+      "pages": ["html/10_full_site.html"],
+      "allowed_hosts": ["portal.example.cn", "cdn.example.cn"],
+      "expected": [
+        "https://portal.example.cn/news/2026/03/12/roadshow.html",
+        "https://portal.example.cn/news/2026/03/11/case-study-90012.html",
+        "https://portal.example.cn/news/2026/03/10/hiring.html",
+        "https://cdn.example.cn/news/2026/03/09/media-kit.html"
+      ]
+    }
+  ],
+  "feeds": [
+    {
+      "id": "01_rss20",
+      "entry_url": "https://feed.example.com/rss.xml",
+      "path": "rss/01_rss20.xml",
+      "allowed_hosts": ["feed.example.com"],
+      "expected": [
+        {
+          "url": "https://feed.example.com/brief/2026/03/12/demand-lines.html",
+          "title": "会员空间需求侧的三条主线",
+          "pub_date": "2026-03-12T01:04:00+00:00"
+        },
+        {
+          "url": "https://feed.example.com/brief/2026/03/11/capital-flow.html",
+          "title": "区域资金流向月报",
+          "pub_date": "2026-03-11T10:20:00+00:00"
+        },
+        {
+          "url": "https://feed.example.com/brief/2026/03/10/policy.html",
+          "title": "政策更新摘要（三月）",
+          "pub_date": "2026-03-10T08:00:00+00:00"
+        },
+        {
+          "url": "https://feed.example.com/brief/2026/03/08/visit-form.pdf",
+          "title": "附件：会员走访表（PDF）",
+          "pub_date": "2026-03-08T08:10:00+00:00"
+        }
+      ],
+      "skipped_host": 1
+    },
+    {
+      "id": "02_atom",
+      "entry_url": "https://atom.example.org/feed.xml",
+      "path": "rss/02_atom.xml",
+      "allowed_hosts": ["atom.example.org"],
+      "expected": [
+        {
+          "url": "https://atom.example.org/posts/2026/03/12/meeting-room.html",
+          "title": "共享会议室的调度策略",
+          "pub_date": "2026-03-12T01:00:00+00:00"
+        },
+        {
+          "url": "https://atom.example.org/posts/2026/03/11/renewal-signals.html",
+          "title": "会员企业的续约信号",
+          "pub_date": "2026-03-11T14:20:00+00:00"
+        },
+        {
+          "url": "https://atom.example.org/posts/2026/03/10/layout.html",
+          "title": "联合办公的动线设计",
+          "pub_date": "2026-03-10T00:45:00+00:00"
+        }
+      ],
+      "skipped_host": 1
+    }
+  ]
+}
