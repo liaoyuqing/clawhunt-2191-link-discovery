@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
+  <title>园区运营观察（虚构 Atom 夹具 02）</title>
+  <subtitle>虚构的 Atom 1.0 订阅源</subtitle>
+  <link href="https://atom.example.org/" rel="alternate"/>
+  <link href="https://atom.example.org/feed.xml" rel="self"/>
+  <id>urn:uuid:8f0a0b46-0000-4000-8000-00000000atom</id>
+  <updated>2026-03-12T10:15:00+08:00</updated>
+  <entry>
+    <title>共享会议室的调度策略</title>
+    <link href="https://atom.example.org/posts/2026/03/12/meeting-room.html" rel="alternate"/>
+    <id>urn:uuid:entry-0001</id>
+    <published>2026-03-12T09:00:00+08:00</published>
+    <updated>2026-03-12T09:30:00+08:00</updated>
+    <summary>调度策略的三次迭代。</summary>
+  </entry>
+  <entry>
+    <title>会员企业的续约信号</title>
+    <link href="/posts/2026/03/11/renewal-signals.html" rel="alternate"/>
+    <id>urn:uuid:entry-0002</id>
+    <published>2026-03-11T14:20:00Z</published>
+    <updated>2026-03-11T14:20:00Z</updated>
+  </entry>
+  <entry>
+    <title>联合办公的动线设计</title>
+    <link href="https://atom.example.org/posts/2026/03/10/layout.html" rel="alternate"/>
+    <link href="https://atom.example.org/files/2026/03/10/layout-figure.png" rel="enclosure" type="image/png"/>
+    <id>urn:uuid:entry-0003</id>
+    <published>2026-03-10T08:45:00+08:00</published>
+    <updated>2026-03-10T09:00:00+08:00</updated>
+  </entry>
+  <entry>
+    <title>外部合作方文章</title>
+    <link href="https://partner.example.org/posts/2026/03/09/coop.html" rel="alternate"/>
+    <id>urn:uuid:entry-0004</id>
+    <published>2026-03-09T19:00:00+08:00</published>
+    <updated>2026-03-09T19:05:00+08:00</updated>
+  </entry>
+</feed>
