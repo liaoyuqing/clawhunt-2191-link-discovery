@@ -1,0 +1,10 @@
+# Runtime deps: none beyond the standard library for the discovery core.
+# Optional extras (uncomment when wiring into the service):
+# fastapi>=0.110
+# pydantic>=2.6
+# SQLAlchemy>=2.0
+#
+# Test deps:
+pytest>=8.0
+SQLAlchemy>=2.0
+fastapi>=0.110
