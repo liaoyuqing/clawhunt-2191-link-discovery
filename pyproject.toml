@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "intel-link-discovery"
+version = "1.0.0"
+description = "Article link discovery for HTML list pages and RSS/Atom feeds (intel briefing module)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Delivery team" }]
+dependencies = []
+
+[project.optional-dependencies]
+api = ["fastapi>=0.110", "pydantic>=2.6"]
+db = ["SQLAlchemy>=2.0"]
+test = ["pytest>=8.0", "SQLAlchemy>=2.0", "fastapi>=0.110"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+intel_discovery = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"
+filterwarnings = [
+    "ignore::DeprecationWarning",
+]
+
+[tool.coverage.run]
+source = ["src/intel_discovery"]
+
